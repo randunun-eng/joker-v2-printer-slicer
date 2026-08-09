@@ -1,3 +1,35 @@
+## Joker V2 Printer Slicer
+
+This public fork packages OrcaSlicer for the **Joker V2 / MagicMaker SLuban**
+printer tested in this repository. The dedicated profile is derived from a
+successful vendor SD-card print and targets:
+
+- 125 × 125 × 145 mm build volume
+- Marlin 2.0.8.1 English firmware
+- 0.4 mm brass nozzle and 1.75 mm filament
+- SN04-N Z-proximity probe
+- corrected extruder direction in the installed firmware
+- `MM Generic PLA`: 205 °C nozzle and 60 °C bed
+- 0.10, 0.20, and 0.30 mm process presets
+
+The profile intentionally corrects the vendor's 160 mm Z declaration to the
+firmware's verified 145 mm limit. It also removes the invalid Klipper-only
+`PRINT_START` and `PRINT_END` macros from the Marlin start/end G-code.
+
+Start with `MagicMaker SLuban 125` → `MM slb` → `0.4 nozzle`, then select
+`MM Generic PLA` and `0.20mm Standard @MM slb`. Export the first new test to SD
+using an 8.3-compatible ASCII filename.
+
+- [Printer profile](resources/profiles/MagicMaker/machine/MM%20slb%200.4%20nozzle.json)
+- [PLA profile](resources/profiles/MagicMaker/filament/MM%20Generic%20PLA.json)
+- [Remote-printing architecture](docs/REMOTE-PRINTING.md)
+- [Original OrcaSlicer project](https://github.com/OrcaSlicer/OrcaSlicer)
+
+The native OrcaSlicer application remains AGPL-3.0 software. This fork preserves
+the upstream history and license.
+
+---
+
 <div align="center">
 
 <picture>
